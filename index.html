@@ -5,124 +5,197 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rising Stars</title>
   <style>
-body {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: auto;
-  padding: 2em;
-  line-height: 1.6;
-  background-color: #2b2b2b; /* grigio scuro */
-  color: #f0f0f0;            /* testo chiaro */
-}
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+      line-height: 1.6;
+      background-color: #2b2b2b; /* grigio scuro */
+      color: #f0f0f0;            /* testo chiaro */
+    }
 
-h1, h2 {
-  color: #66b2ff; /* blu chiaro per contrasto */
-}
+    /* --- Barra di navigazione --- */
+    .navbar {
+      background-color: #1f1f1f;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-radius: 8px;
+      margin-bottom: 2em;
+      padding: 0;
+    }
 
-a {
-  color: #4da6ff; /* link azzurri */
-}
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #555; /* bordo più scuro */
-  margin: 1em 0;
-}
+    .navbar li {
+      margin: 0;
+    }
 
-table {
-  color: #f0f0f0;
-  border-color: #555;
-}
+    .navbar a {
+      display: block;
+      color: #ddd;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
 
-th {
-  background-color: #444;
-}
+    .navbar a:hover {
+      background-color: #333;
+      color: #fff;
+    }
 
-td {
-  background-color: #333;
-}
+    .navbar a.active {
+      background-color: #4da6ff;
+      color: #000;
+      border-radius: 8px 8px 0 0;
+    }
+
+    h1, h2 {
+      color: #66b2ff; /* blu chiaro per contrasto */
+    }
+
+    a {
+      color: #4da6ff;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #555;
+      margin: 1em 0;
+    }
+
+    table {
+      color: #f0f0f0;
+      border: 1px solid #555;
+      border-collapse: collapse;
+      width: 70%;
+      margin: auto;
+    }
+
+    th {
+      background-color: #444;
+      padding: 8px;
+    }
+
+    td {
+      background-color: #333;
+      padding: 8px;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
-  <h1 style="text-align: center;">CNR IMATI WORKSHOP</h1>
-  <h2 style="text-align: center;">1<sup>st</sup> Edition</h2>
+  <!-- Barra di navigazione -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#seminars">List of seminars</a></li>
+      <li><a href="#editorial">Editorial members</a></li>
+    </ul>
+  </nav>
 
-  <img src="RISING_STARS_2.png" alt="User interface" /> 
+  <!-- Sezione Home -->
+  <section id="home">
+    <h1 style="text-align: center;">CNR IMATI WORKSHOP</h1>
+    <h2 style="text-align: center;">1<sup>st</sup> Edition</h2>
 
-<h2>Motivation and goal</h2>
-<p>
-  We announce the first edition of the CNR IMATI workshop. The CNR IMATI group will present the research activities in the following research areas:
-</p>
-<ul>
-  <li>Shape and signal modelling</li>
-  <li>Biomedical data processing</li>
-  <li>Urban data analysis</li>
-  <li>Geological modelling</li>
-  <li>Cybersecurity</li>
-  <li>PDE</li>
-  <li>xxxxxx</li>
-</ul>
+    <img src="RISING_STARS_2.png" alt="User interface" /> 
 
-  <h2>Location</h2>
-  <p>
-    CNR IMATI, Genova, Via de Marini 6, Room 638
-  </p>
+    <h2>Motivation and goal</h2>
+    <p>
+      We announce the first edition of the CNR IMATI workshop. The CNR IMATI group will present the research activities in the following research areas:
+    </p>
+    <ul>
+      <li>Shape and signal modelling</li>
+      <li>Biomedical data processing</li>
+      <li>Urban data analysis</li>
+      <li>Geological modelling</li>
+      <li>Cybersecurity</li>
+      <li>PDE</li>
+      <li>xxxxxx</li>
+    </ul>
 
-  <h2>Date</h2>
-  <p>
-    16 December 2025
-  </p>
+    <h2>Location</h2>
+    <p>CNR IMATI, Genova, Via de Marini 6, Room 638</p>
 
-<h2>Program</h2>
-<ul>
-  <li>10.00 Registration</li>
-  <li>10.30 Introduction</li>
-  <li>11.00 First session of presentations</li>
-  <li>13.00 Lunch and poster session</li>
-  <li>14.00 Second session of presentations</li>
-  <li>15.30 Presentation of Master and Ph.D. thesis proposals</li>
-  <li>16.00 Conclusions</li>
-</ul>
+    <h2>Date</h2>
+    <p>16 December 2025</p>
+  </section>
 
-<h2>Publications</h2>  
- <p>
-    The abstract will be published in the book of Abstract, edited by Science PG Group
-</p>
+  <!-- Sezione Program -->
+  <section id="program">
+    <h2>Program</h2>
+    <ul>
+      <li>10.00 Registration</li>
+      <li>10.30 Introduction</li>
+      <li>11.00 First session of presentations</li>
+      <li>13.00 Lunch and poster session</li>
+      <li>14.00 Second session of presentations</li>
+      <li>15.30 Presentation of Master and Ph.D. thesis proposals</li>
+      <li>16.00 Conclusions</li>
+    </ul>
 
-<h2 style="text-align:center;">Board Members</h2>
+    <h2>Publications</h2>  
+    <p>The abstract will be published in the book of Abstract, edited by Science PG Group</p>
+  </section>
 
-<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 70%; margin: auto;">
-  <thead>
-    <tr style="background-color: #f0f0f0;">
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Affiliazione</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Simone Cammarasana</td>
-      <td>simone.cammarasana@cnr.it</td>
-      <td>CNR IMATI</td>
-    </tr>
-    <tr>
-      <td>Marianna Miola</td>
-      <td>marianna.miola@cnr.it</td>
-      <td>CNR IMATI</td>
-    </tr>
-    <tr>
-      <td>Chiara Romanengo</td>
-      <td>chiara.romanengo@cnr.it</td>
-      <td>CNR IMATI</td>
-    </tr>
-    <tr>
-      <td>Ulderico Fugacci</td>
-      <td>ulderico.fugacci@cnr.it</td>
-      <td>CNR IMATI</td>
-    </tr>
-  </tbody>
-</table>
+  <!-- Sezione List of Seminars -->
+  <section id="seminars">
+    <h2>List of Seminars</h2>
+    <p>(To be announced)</p>
+  </section>
 
+  <!-- Sezione Editorial Members -->
+  <section id="editorial">
+    <h2 style="text-align:center;">Editorial Members</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Affiliazione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Simone Cammarasana</td>
+          <td>simone.cammarasana@cnr.it</td>
+          <td>CNR IMATI</td>
+        </tr>
+        <tr>
+          <td>Marianna Miola</td>
+          <td>marianna.miola@cnr.it</td>
+          <td>CNR IMATI</td>
+        </tr>
+        <tr>
+          <td>Chiara Romanengo</td>
+          <td>chiara.romanengo@cnr.it</td>
+          <td>CNR IMATI</td>
+        </tr>
+        <tr>
+          <td>Ulderico Fugacci</td>
+          <td>ulderico.fugacci@cnr.it</td>
+          <td>CNR IMATI</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </body>
 </html>
