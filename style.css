@@ -118,6 +118,29 @@ ul {
   margin-left: 1.2em;
 }
 
+/* --- Programmazione come tabella --- */
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* separazione gestita dalle linee */
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 80px 1fr; /* colonna orario + colonna testo */
+  padding: 0.5em 0;
+  border-bottom: 1px solid #555; /* riga grigia orizzontale */
+}
+
+.time {
+  font-weight: bold;
+  color: #4da6ff;
+}
+
+.text {
+  padding-left: 1em;
+}
+
 /* --- Footer --- */
 footer {
   background-color: #1f1f1f;
