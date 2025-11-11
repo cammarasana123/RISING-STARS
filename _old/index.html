@@ -4,7 +4,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CNR IMATI WORKSHOP</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #2b2b2b;
+      color: #f0f0f0;
+    }
+
+    /* --- Navbar --- */
+.navbar {
+  background-color: #1f1f1f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #333;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  height: 60px; /* altezza fissa della navbar */
+}
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar li {
+      margin: 0;
+    }
+
+    .navbar a {
+      display: block;
+      color: #ddd;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .navbar a.active {
+      background-color: #4da6ff;
+      color: #000;
+    }
+
+    .navbar img {
+  height: 40px; /* ridotta, rimane dentro la navbar */
+  margin-right: 10px;
+  }
+
+    /* --- Contenuto delle sezioni --- */
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+      display: none;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    h1, h2 {
+      color: #66b2ff;
+    }
+
+    a {
+      color: #4da6ff;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #555;
+      margin: 1em 0;
+    }
+
+    table {
+      color: #f0f0f0;
+      border: 1px solid #555;
+      border-collapse: collapse;
+      width: 70%;
+      margin: auto;
+    }
+
+    th {
+      background-color: #444;
+      padding: 8px;
+    }
+
+    td {
+      background-color: #333;
+      padding: 8px;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      text-align: center;
+    }
+
+    ul {
+      margin-left: 1.2em;
+    }
+  </style>
 </head>
 
 <body>
@@ -111,14 +224,13 @@
   <!-- Come raggiungerci -->
   <div id="comeraggiungerci" class="content">
     <p>(To be announced)</p>
-  </div>
+
+
     
   </div>
-  
-  <!-- Footer -->
-  <footer>
-    © 2025 CNR IMATI – Workshop 1st Edition
-  </footer>
+
+    
+  </div>
 
   <script>
     const links = document.querySelectorAll('.navbar a');
