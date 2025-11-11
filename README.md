@@ -4,7 +4,7 @@ Questo repository contiene il sito ufficiale della **prima edizione del CNR IMAT
 
 📍 **Luogo:** CNR IMATI, Via de Marini 6, Genova  
 📅 **Data:** 16 dicembre 2025  
-🌐 **Versione online:** [https://github.com/cammarasana123/CNR-IMATI-WORKSHOP.git](https://github.com/cammarasana123/CNR-IMATI-WORKSHOP.git)
+<!--🌐 **Versione online:** [https://github.com/cammarasana123/CNR-IMATI-WORKSHOP.git](https://github.com/cammarasana123/CNR-IMATI-WORKSHOP.git)-->
 
 ## Struttura
 - `index.html` — Pagina principale con navbar e sezioni dinamiche  
