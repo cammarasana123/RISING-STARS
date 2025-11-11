@@ -7,12 +7,12 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 2em;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
-      background-color: #2b2b2b; /* grigio scuro */
-      color: #f0f0f0;            /* testo chiaro */
+      background-color: #2b2b2b;
+      color: #f0f0f0;
+      overflow: hidden; /* evita lo scroll verticale */
     }
 
     /* --- Barra di navigazione --- */
@@ -21,9 +21,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-radius: 8px;
-      margin-bottom: 2em;
-      padding: 0;
+      border-bottom: 2px solid #333;
     }
 
     .navbar ul {
@@ -56,11 +54,27 @@
     .navbar a.active {
       background-color: #4da6ff;
       color: #000;
-      border-radius: 8px 8px 0 0;
+    }
+
+    /* --- Contenitore delle "pagine" --- */
+    .container {
+      display: flex;
+      width: 400%; /* 4 sezioni */
+      transition: transform 0.6s ease-in-out;
+      height: calc(100vh - 60px); /* tutto tranne navbar */
+    }
+
+    section {
+      flex: 1 0 100%;
+      padding: 2em;
+      overflow-y: auto;
+      box-sizing: border-box;
+      max-width: 800px;
+      margin: auto;
     }
 
     h1, h2 {
-      color: #66b2ff; /* blu chiaro per contrasto */
+      color: #66b2ff;
     }
 
     a {
@@ -96,6 +110,10 @@
       border: 1px solid #555;
       text-align: center;
     }
+
+    ul {
+      margin-left: 1.2em;
+    }
   </style>
 </head>
 
@@ -103,99 +121,120 @@
   <!-- Barra di navigazione -->
   <nav class="navbar">
     <ul>
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#program">Program</a></li>
-      <li><a href="#seminars">List of seminars</a></li>
-      <li><a href="#editorial">Editorial members</a></li>
+      <li><a href="#" class="active" data-tab="0">Home</a></li>
+      <li><a href="#" data-tab="1">Program</a></li>
+      <li><a href="#" data-tab="2">List of Seminars</a></li>
+      <li><a href="#" data-tab="3">Editorial Members</a></li>
     </ul>
   </nav>
 
-  <!-- Sezione Home -->
-  <section id="home">
-    <h1 style="text-align: center;">CNR IMATI WORKSHOP</h1>
-    <h2 style="text-align: center;">1<sup>st</sup> Edition</h2>
+  <!-- Contenitore orizzontale -->
+  <div class="container">
+    
+    <!-- Pagina 1 -->
+    <section id="home">
+      <h1 style="text-align: center;">CNR IMATI WORKSHOP</h1>
+      <h2 style="text-align: center;">1<sup>st</sup> Edition</h2>
 
-    <img src="RISING_STARS_2.png" alt="User interface" /> 
+      <img src="RISING_STARS_2.png" alt="User interface" /> 
 
-    <h2>Motivation and goal</h2>
-    <p>
-      We announce the first edition of the CNR IMATI workshop. The CNR IMATI group will present the research activities in the following research areas:
-    </p>
-    <ul>
-      <li>Shape and signal modelling</li>
-      <li>Biomedical data processing</li>
-      <li>Urban data analysis</li>
-      <li>Geological modelling</li>
-      <li>Cybersecurity</li>
-      <li>PDE</li>
-      <li>xxxxxx</li>
-    </ul>
+      <h2>Motivation and goal</h2>
+      <p>
+        We announce the first edition of the CNR IMATI workshop. The CNR IMATI group will present the research activities in the following research areas:
+      </p>
+      <ul>
+        <li>Shape and signal modelling</li>
+        <li>Biomedical data processing</li>
+        <li>Urban data analysis</li>
+        <li>Geological modelling</li>
+        <li>Cybersecurity</li>
+        <li>PDE</li>
+        <li>xxxxxx</li>
+      </ul>
 
-    <h2>Location</h2>
-    <p>CNR IMATI, Genova, Via de Marini 6, Room 638</p>
+      <h2>Location</h2>
+      <p>CNR IMATI, Genova, Via de Marini 6, Room 638</p>
 
-    <h2>Date</h2>
-    <p>16 December 2025</p>
-  </section>
+      <h2>Date</h2>
+      <p>16 December 2025</p>
+    </section>
 
-  <!-- Sezione Program -->
-  <section id="program">
-    <h2>Program</h2>
-    <ul>
-      <li>10.00 Registration</li>
-      <li>10.30 Introduction</li>
-      <li>11.00 First session of presentations</li>
-      <li>13.00 Lunch and poster session</li>
-      <li>14.00 Second session of presentations</li>
-      <li>15.30 Presentation of Master and Ph.D. thesis proposals</li>
-      <li>16.00 Conclusions</li>
-    </ul>
+    <!-- Pagina 2 -->
+    <section id="program">
+      <h2>Program</h2>
+      <ul>
+        <li>10.00 Registration</li>
+        <li>10.30 Introduction</li>
+        <li>11.00 First session of presentations</li>
+        <li>13.00 Lunch and poster session</li>
+        <li>14.00 Second session of presentations</li>
+        <li>15.30 Presentation of Master and Ph.D. thesis proposals</li>
+        <li>16.00 Conclusions</li>
+      </ul>
 
-    <h2>Publications</h2>  
-    <p>The abstract will be published in the book of Abstract, edited by Science PG Group</p>
-  </section>
+      <h2>Publications</h2>  
+      <p>The abstract will be published in the book of Abstract, edited by Science PG Group</p>
+    </section>
 
-  <!-- Sezione List of Seminars -->
-  <section id="seminars">
-    <h2>List of Seminars</h2>
-    <p>(To be announced)</p>
-  </section>
+    <!-- Pagina 3 -->
+    <section id="seminars">
+      <h2>List of Seminars</h2>
+      <p>(To be announced)</p>
+    </section>
 
-  <!-- Sezione Editorial Members -->
-  <section id="editorial">
-    <h2 style="text-align:center;">Editorial Members</h2>
+    <!-- Pagina 4 -->
+    <section id="editorial">
+      <h2 style="text-align:center;">Editorial Members</h2>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Email</th>
-          <th>Affiliazione</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Simone Cammarasana</td>
-          <td>simone.cammarasana@cnr.it</td>
-          <td>CNR IMATI</td>
-        </tr>
-        <tr>
-          <td>Marianna Miola</td>
-          <td>marianna.miola@cnr.it</td>
-          <td>CNR IMATI</td>
-        </tr>
-        <tr>
-          <td>Chiara Romanengo</td>
-          <td>chiara.romanengo@cnr.it</td>
-          <td>CNR IMATI</td>
-        </tr>
-        <tr>
-          <td>Ulderico Fugacci</td>
-          <td>ulderico.fugacci@cnr.it</td>
-          <td>CNR IMATI</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Affiliazione</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Simone Cammarasana</td>
+            <td>simone.cammarasana@cnr.it</td>
+            <td>CNR IMATI</td>
+          </tr>
+          <tr>
+            <td>Marianna Miola</td>
+            <td>marianna.miola@cnr.it</td>
+            <td>CNR IMATI</td>
+          </tr>
+          <tr>
+            <td>Chiara Romanengo</td>
+            <td>chiara.romanengo@cnr.it</td>
+            <td>CNR IMATI</td>
+          </tr>
+          <tr>
+            <td>Ulderico Fugacci</td>
+            <td>ulderico.fugacci@cnr.it</td>
+            <td>CNR IMATI</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll('.navbar a');
+    const container = document.querySelector('.container');
+
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const index = link.getAttribute('data-tab');
+        container.style.transform = `translateX(-${index * 100}%)`;
+
+        // aggiorna la tab attiva
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
