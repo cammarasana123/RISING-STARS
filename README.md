@@ -12,7 +12,7 @@ Questo repository contiene il sito ufficiale della **prima edizione del CNR IMAT
 - `RISING_STARS_3.png` — Logo ufficiale
 
 ## Come visualizzarlo
-Apri `index.html` nel browser oppure pubblica con https://cammarasana123.github.io/CNR-IMATI-WORKSHOP/.
+Indirizzo https://cammarasana123.github.io/CNR-IMATI-WORKSHOP/.
 
 ## Autori
 CNR IMATI Research Group  
